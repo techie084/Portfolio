@@ -221,14 +221,10 @@ body {
 
 /* ABOUT ME SECTION */
 .about {
-  height: 100vh;
+  height: auto;
   padding: 1rem;
   .text {
     text-align: center;
-    .p1 {
-      color: var(--grey);
-      font-size: 1.2rem;
-    }
     .h1 {
       font-size: 3rem;
     }
@@ -241,6 +237,7 @@ body {
       margin: auto 0;
       .image {
         width: 400px;
+        /* height: ; */
         border-radius: 20px;
       }
     }
@@ -269,7 +266,7 @@ body {
 
 /* EXPERIENCE SECTION */
 .experience {
-  /* height: 100vh; */
+  height: auto;
   .text {
     justify-content: center;
     align-items: center;
@@ -485,10 +482,8 @@ body {
     height: 750px;
     border-radius: 1rem;
     padding: 1.5rem;
-    /* display: flex; */
     gap: 1rem;
     .row {
-      /* border-radius: 1rem; */
       &.row-1 {
         flex: 2;
         display: flex;
@@ -501,6 +496,8 @@ body {
           gap: 1rem;
           /* just ignore and try not to understand */
           .col-box {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
             border: 2px solid var(--grey);
             flex: 1;
             border-radius: 1rem;
@@ -509,6 +506,7 @@ body {
             &:hover {
               cursor: pointer;
               transform: scale(1.02);
+              box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
             }
           }
           &.col-2 {
@@ -620,7 +618,7 @@ body {
     height: 15vh;
     padding: 1rem;
     .hamburger-logo {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-style: italic;
     }
   }
@@ -629,6 +627,9 @@ body {
   .profile {
     .text {
       margin: 2.5rem 1rem;
+      .p-section {
+        text-wrap: wrap;
+      }
       h1 {
         img {
           width: 100px;
@@ -636,7 +637,7 @@ body {
       }
       .p-section {
         p {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           b {
             text-shadow: none;
           }
@@ -650,12 +651,6 @@ body {
 
   /* ABOUT SECTION */
   .about {
-    .text {
-      margin-bottom: 1rem;
-      .h1 {
-        font-size: 2rem;
-      }
-    }
     .section-container {
       margin: 0rem;
       flex-flow: row wrap;
@@ -664,6 +659,7 @@ body {
         .image {
           margin: 0rem;
           width: 20rem;
+          height: auto;
         }
       }
       .about-container {
@@ -720,21 +716,18 @@ body {
   .profile {
     .text {
       h1 {
-        font-size: 6.5rem;
+        font-size: 7rem;
       }
     }
   }
 
   /* ABOUT SECTION */
   .about {
-    height: 100%;
+    height: auto;
     .text {
       margin-bottom: 1rem;
-      .p1 {
-        font-size: 1.5rem;
-      }
       .h1 {
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
     .section-container {
@@ -742,24 +735,19 @@ body {
       gap: 0rem;
       .about-pic {
         margin: 0rem 1.5rem;
-        padding: 0rem 0.5rem;
-        .image {
-          margin: 0rem;
-          /* width: 22rem; */
-        }
+        padding: 0rem 0.8rem;
       }
     }
   }
 
   /* EXPERIENCE SECTION */
   .experience {
-    height: 100%;
+    height: auto;
     .text {
-      .p2 {
-        font-size: 1.5rem;
-      }
       h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin: 1rem 0rem;
+        font-weight: 1000;
       }
       .experience-container {
         padding: 0rem;
@@ -772,7 +760,7 @@ body {
 
   /* PROJECTS SECTION */
   .project {
-    height: 100%;
+    height: auto;
     display: flex;
     .text-container {
       h1 {
@@ -828,7 +816,7 @@ body {
 
   /* PROFILE SECTION */
   .profile {
-    height: 40vh;
+    height: auto;
     .text {
       margin: 0rem 1rem;
       h1 {
