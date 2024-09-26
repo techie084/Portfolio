@@ -4,17 +4,11 @@
 /* GENERAL STYLING */
 :root {
   /* COLORS */
-  /* primary */
   --green: #1fc12d;
-  /* dark */
   --dark: #04121c;
-  /* grey */
   --grey: #7a807e;
-  /* stroke */
   --stroke: #eaf0ee;
-  /* background */
   --background: #fgFbFb;
-  /* white */
   --white: #fff;
 }
 
@@ -31,6 +25,63 @@ body {
   font-family: "overpass", sans-serif;
 }
 
+/* LOADING ANIMATION */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  letter-spacing: 1rem;
+}
+.loading-text {
+  font-size: 44px;
+  color: green;
+  display: inline-block;
+  transition: all 0.9s;
+  animation: animate 1.5s infinite;
+}
+.loading-text:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.loading-text:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.loading-text:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loading-text:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.loading-text:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.loading-text:nth-child(6) {
+  animation-delay: 0.8s;
+}
+.loading-text:nth-child(7) {
+  animation-delay: 0.9s;
+}
+.loading-text:nth-child(8) {
+  animation-delay: 1s;
+}
+.loading-text:nth-child(9) {
+  animation-delay: 1.2s;
+}
+.loading-text:nth-child(10) {
+  animation-delay: 1.4s;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* DESKTOP NAV BAR */
 .desk-nav {
   display: flex;
@@ -45,17 +96,12 @@ body {
       cursor: pointer;
     }
   }
-  nav {
-    justify-content: space-between;
-    align-items: center;
-  }
   .nav-links {
     font-size: 1.2rem;
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     a {
-      align-items: flex-end;
       text-decoration: none;
       color: var(--dark);
       &:hover {
@@ -141,9 +187,9 @@ body {
 
 /* PROFILE SECTION */
 .profile {
-  /* height: auto; */
+  height: auto;
   .text {
-    margin: 6rem 2rem;
+    margin: 6rem 2rem 3rem;
     h1 {
       text-align: right;
       font-size: 11rem;
@@ -393,9 +439,17 @@ body {
             border-radius: 1rem;
             transition: 0.3s ease-in-out;
             padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &:hover {
               cursor: pointer;
               transform: scale(1.02);
+            }
+            img {
+              border-radius: 0.9rem;
+              /* width: 170px; */
+              height: fit-content;
             }
           }
           &.col-2 {
@@ -567,16 +621,15 @@ body {
     padding: 1rem;
     .hamburger-logo {
       font-size: 2rem;
+      font-style: italic;
     }
   }
 
   /* PROFILE SECTION */
   .profile {
-    height: 55vh;
     .text {
       margin: 2.5rem 1rem;
       h1 {
-        font-size: 9rem;
         img {
           width: 100px;
         }
@@ -608,11 +661,15 @@ body {
       flex-flow: row wrap;
       gap: 0rem;
       .about-pic {
-        margin: 0rem;
         .image {
           margin: 0rem;
           width: 20rem;
         }
+      }
+      .about-container {
+        display: flex;
+        gap: 0px 2rem;
+        flex-flow: wrap;
       }
     }
   }
@@ -621,14 +678,9 @@ body {
   .experience {
     height: 75vh;
     padding: 1rem 0rem;
-    h1 {
-      font-size: 2rem;
-    }
     .text {
       .experience-container {
-        gap: 0.5rem;
-        margin: 0rem 4rem;
-        flex-direction: column;
+        margin: 0rem 3rem;
       }
     }
   }
@@ -643,32 +695,17 @@ body {
   /* FOOTER SECTION */
   .footer {
     .text {
-      .p1 {
-        font-size: 1.5rem;
-      }
       h1 {
-        font-size: 8rem;
+        font-size: 7rem;
       }
       #btn {
-        width: 10rem;
-        font-size: 1.5rem;
         &:hover {
           cursor: pointer;
           background: lightgreen;
         }
       }
-      .nav-links-container {
-        flex-direction: column;
-        .logo {
-          margin-top: 3rem;
-          font-size: 2rem;
-        }
-        .nav-links {
-          margin: 0rem;
-        }
-      }
-      .p {
-        font-size: 0.8rem;
+      .nav-links {
+        margin: 0rem;
       }
     }
   }
@@ -681,14 +718,9 @@ body {
 
   /* PROFILE SECTION */
   .profile {
-    height: 65vh;
     .text {
       h1 {
-        font-size: 6.8rem;
-      }
-      .p-section {
-        /* text-align: justify; */
-        text-wrap: wrap;
+        font-size: 6.5rem;
       }
     }
   }
@@ -710,7 +742,7 @@ body {
       gap: 0rem;
       .about-pic {
         margin: 0rem 1.5rem;
-        padding: 0rem 1rem;
+        padding: 0rem 0.5rem;
         .image {
           margin: 0rem;
           /* width: 22rem; */
@@ -727,7 +759,7 @@ body {
         font-size: 1.5rem;
       }
       h1 {
-        font-size: 3rem;
+        font-size: 2rem;
       }
       .experience-container {
         padding: 0rem;
@@ -743,9 +775,8 @@ body {
     height: 100%;
     display: flex;
     .text-container {
-      margin-bottom: 1.5rem;
       h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 1000;
       }
     }
@@ -773,7 +804,7 @@ body {
         flex-direction: column;
         .logo {
           margin-top: 3rem;
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
         .nav-links {
           margin-top: 2rem;
@@ -892,13 +923,16 @@ body {
   .footer {
     .text {
       padding: 1rem;
+      .p1 {
+        font-size: 1rem;
+      }
       h1 {
         letter-spacing: 5px;
-        font-size: 7rem;
+        font-size: 6rem;
       }
       #btn {
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1rem;
         &:hover {
           cursor: pointer;
           background: lightgreen;
@@ -908,11 +942,8 @@ body {
         flex-direction: column;
         .logo {
           margin-top: 3rem;
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
-      }
-      .p {
-        font-size: 0.8rem;
       }
     }
   }
