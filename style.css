@@ -128,7 +128,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 24px;
+      height: 30px;
       width: 30px;
       cursor: pointer;
       span {
@@ -189,7 +189,7 @@ body {
 .profile {
   height: auto;
   .text {
-    margin: 6rem 2rem 3rem;
+    margin: 6rem 2rem 2rem;
     h1 {
       text-align: right;
       font-size: 11rem;
@@ -235,9 +235,8 @@ body {
     margin: 2rem 10rem;
     .about-pic {
       margin: auto 0;
-      .image {
-        width: 400px;
-        /* height: ; */
+      img {
+        max-width: 100%;
         border-radius: 20px;
       }
     }
@@ -418,7 +417,6 @@ body {
     display: flex;
     gap: 1rem;
     .row {
-      /* border-radius: 1rem; */
       &.row-1 {
         flex: 2;
         display: flex;
@@ -442,11 +440,6 @@ body {
             &:hover {
               cursor: pointer;
               transform: scale(1.02);
-            }
-            img {
-              border-radius: 0.9rem;
-              /* width: 170px; */
-              height: fit-content;
             }
           }
           &.col-2 {
@@ -481,19 +474,19 @@ body {
     width: 1400px;
     height: 750px;
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
     gap: 1rem;
     .row {
       &.row-1 {
         flex: 2;
         display: flex;
         flex-flow: column wrap;
-        gap: 1rem;
+        gap: 0.5rem;
         .col {
           flex: 1;
           border-radius: 1rem;
           display: flex;
-          gap: 1rem;
+          gap: 0.5rem;
           /* just ignore and try not to understand */
           .col-box {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -523,6 +516,7 @@ body {
 /* CONTACT SECTION */
 .footer {
   background: black;
+  /* width: 100%; */
   .text {
     padding: 5rem 3rem;
     .p1 {
@@ -626,7 +620,7 @@ body {
   /* PROFILE SECTION */
   .profile {
     .text {
-      margin: 2.5rem 1rem;
+      margin: 0rem auto;
       .p-section {
         text-wrap: wrap;
       }
@@ -651,21 +645,11 @@ body {
 
   /* ABOUT SECTION */
   .about {
-    .section-container {
-      margin: 0rem;
-      flex-flow: row wrap;
-      gap: 0rem;
-      .about-pic {
-        .image {
-          margin: 0rem;
-          width: 20rem;
-          height: auto;
-        }
-      }
-      .about-container {
-        display: flex;
-        gap: 0px 2rem;
-        flex-flow: wrap;
+    .about-pic {
+      .image {
+        margin: 0rem;
+        width: 20rem;
+        height: auto;
       }
     }
   }
@@ -707,11 +691,7 @@ body {
   }
 }
 
-@media screen and (max-width: 428px) {
-  .desk-nav {
-    display: none;
-  }
-
+@media screen and (max-width: 520px) {
   /* PROFILE SECTION */
   .profile {
     .text {
@@ -724,18 +704,21 @@ body {
   /* ABOUT SECTION */
   .about {
     height: auto;
-    .text {
-      margin-bottom: 1rem;
-      .h1 {
-        font-size: 2rem;
-      }
+    .h1 {
+      font-size: 2rem;
     }
     .section-container {
-      flex-flow: row wrap;
+      margin: 0;
+      flex-flow: column wrap;
       gap: 0rem;
       .about-pic {
-        margin: 0rem 1.5rem;
-        padding: 0rem 0.8rem;
+        margin: 0rem auto;
+      }
+      .about-container {
+        display: flex;
+        gap: 0px 1rem;
+        flex-flow: wrap;
+        padding: 0;
       }
     }
   }
@@ -750,9 +733,11 @@ body {
         font-weight: 1000;
       }
       .experience-container {
-        padding: 0rem;
+        gap: 0.5rem;
+        margin: 0rem 1rem;
+        flex-direction: column;
         .text-container {
-          width: 300px;
+          width: 100%;
         }
       }
     }
@@ -770,9 +755,6 @@ body {
     }
     .container {
       display: none;
-    }
-    .container-2 {
-      display: flex;
     }
   }
 
@@ -806,14 +788,6 @@ body {
 }
 
 @media screen and (max-width: 412px) {
-  body {
-    height: 100%;
-  }
-
-  .desk-nav {
-    display: none;
-  }
-
   /* PROFILE SECTION */
   .profile {
     height: auto;
@@ -839,15 +813,15 @@ body {
 
   /* ABOUT SECTION */
   .about {
-    height: 100%;
+    height: auto;
     .text {
       margin-bottom: 1rem;
       .h1 {
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
     .section-container {
-      margin: 0rem 2rem;
+      margin: 0rem;
       flex-flow: row wrap;
       gap: 0rem;
       .about-pic {
@@ -862,7 +836,7 @@ body {
 
   /* EXPERIENCE SECTION */
   .experience {
-    height: 90vh;
+    height: auto;
     padding: 1rem 0rem;
     h1 {
       font-size: 3rem;
@@ -870,15 +844,18 @@ body {
     .text {
       .experience-container {
         gap: 0.5rem;
-        margin: 0rem 4rem;
+        margin: 0rem 1rem;
         flex-direction: column;
+        .text-container {
+          width: 100%;
+        }
       }
     }
   }
 
   /* PROJECTS SECTION */
   .project {
-    height: 70vh;
+    height: auto;
     margin: 1rem;
     .text-container {
       margin-bottom: 1.5rem;
@@ -886,24 +863,10 @@ body {
         font-size: 3rem;
       }
     }
-    .container {
-      padding: 0rem;
-      flex-direction: column;
-      .row-1 {
-        .col-1 {
-          flex-flow: column wrap;
-        }
-        .col-2 {
-          flex-flow: row wrap;
-        }
-      }
-      .row-3 {
-        width: 0;
-        height: 0;
-        .box {
-          display: none;
-        }
-      }
+    .container-2 {
+      display: flex;
+      width: 100%;
+      padding: 0;
     }
   }
 
