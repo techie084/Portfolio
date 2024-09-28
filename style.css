@@ -516,7 +516,6 @@ body {
 /* CONTACT SECTION */
 .footer {
   background: black;
-  /* width: 100%; */
   .text {
     padding: 5rem 3rem;
     .p1 {
@@ -566,8 +565,7 @@ body {
       .nav-links {
         margin-top: 5rem;
         .links {
-          font-size: 0.5rem;
-          gap: 1.5rem;
+          gap: 1rem;
           display: flex;
           align-items: baseline;
           li {
@@ -586,7 +584,7 @@ body {
       }
     }
     .p {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       text-align: center;
       color: var(--white);
       font-size: 0.9rem;
@@ -620,7 +618,6 @@ body {
   /* PROFILE SECTION */
   .profile {
     .text {
-      margin: 0rem auto;
       .p-section {
         text-wrap: wrap;
       }
@@ -695,6 +692,7 @@ body {
   /* PROFILE SECTION */
   .profile {
     .text {
+      margin: 0rem 1rem;
       h1 {
         font-size: 6rem;
       }
@@ -703,10 +701,6 @@ body {
 
   /* ABOUT SECTION */
   .about {
-    height: auto;
-    .h1 {
-      font-size: 2rem;
-    }
     .section-container {
       margin: 0;
       flex-flow: column wrap;
@@ -728,7 +722,7 @@ body {
     height: auto;
     .text {
       h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin: 1rem 0rem;
         font-weight: 1000;
       }
@@ -756,12 +750,19 @@ body {
     .container {
       display: none;
     }
+    .container-2 {
+      display: flex;
+      width: 100%;
+      .col {
+        flex-direction: column wrap;
+      }
+    }
   }
 
   /* FOOTER SECTION */
   .footer {
     .text {
-      padding: 1.5rem;
+      padding: 1rem;
       #btn {
         width: 100%;
         font-size: 1.5rem;
@@ -773,11 +774,11 @@ body {
       .nav-links-container {
         flex-direction: column;
         .logo {
-          margin-top: 3rem;
+          margin-top: 2rem;
           font-size: 1rem;
         }
         .nav-links {
-          margin-top: 2rem;
+          margin-top: 1rem;
         }
       }
       .p {
